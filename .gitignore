@@ -1,0 +1,7 @@
+Library/
+.idea/
+.vscode/
+Build/
+Logs/
+node_modules/
+Temp/
