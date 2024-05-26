@@ -16,12 +16,9 @@ export default class UiController extends ZepetoScriptBehaviour {
     public stopGestureBtn: Button;
     public interactionBtn: Button;
     public inventorytBtn: Button;
-    public foldScreenShot: Button;
-    public foldScreenShotAnim: Animator;
 
     private characterPlayer: CharacterPlayer;
     private furnitureAction: () => void
-    private show: boolean;
     
 
     public OnEnterFurniture(furnitureAction: () => void) {
@@ -36,8 +33,6 @@ export default class UiController extends ZepetoScriptBehaviour {
 
     Awake() {
         UiController.instance = this;
-        this.show = false;
-        
     }
 
 
@@ -78,18 +73,6 @@ export default class UiController extends ZepetoScriptBehaviour {
         this.inventorytBtn.onClick.AddListener(() => {
 
         });
-        this.foldScreenShot.onClick.AddListener(() => {
-            if (this.show == false) {
-                this.show = true;
-                this.foldScreenShotAnim.Play("ScreenShot_show");
-
-            }
-            else if (this.show == true) {
-                this.show = false;
-                this.foldScreenShotAnim.Play("ScreenShot_hide");
-            }
-        });
-    
 
     }
 
