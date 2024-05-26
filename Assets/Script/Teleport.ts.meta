@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: dec630cee20b26443a92f693423c3992
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Teleport extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(collider) {\r\n        if (collider.gameObject.layer
+    == UnityEngine_1.LayerMask.NameToLayer(\"Player\")) {\r\n            var zepetoCharacter
+    = collider.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n           
+    zepetoCharacter.Teleport(this.destination.transform.position, UnityEngine_1.Quaternion.identity);\r\n           
+    //console.log(\"OnTriggerEnter!!!\");\r\n        }\r\n    }\r\n    Start() {\r\n   
+    }\r\n}\r\nexports.default = Teleport;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFtRjtBQUNuRiw2RUFBOEQ7QUFDOUQsaURBQXFEO0FBRXJELE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFJdkQsY0FBYyxDQUFDLFFBQWtCO1FBQzdCLElBQUksUUFBUSxDQUFDLFVBQVUsQ0FBQyxLQUFLLElBQUksdUJBQVMsQ0FBQyxXQUFXLENBQUMsUUFBUSxDQUFDLEVBQUU7WUFDOUQsSUFBSSxlQUFlLEdBQUcsUUFBUSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1lBQzFFLGVBQWUsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFFLHdCQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7WUFFbkYsbUNBQW1DO1NBRXRDO0lBR0wsQ0FBQztJQUVELEtBQUs7SUFFTCxDQUFDO0NBRUo7QUFwQkQsMkJBb0JDIn0=","assetPath":"Assets/Script/Teleport.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"destination","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Teleport","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 0b56a96072f232770adfd67f8475c622
+  onlyWriteTrigger: 0

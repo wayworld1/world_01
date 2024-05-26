@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: cc800794482fd804597c271c238849f8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    Braizer extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.FireOff();\r\n    }\r\n    OnTriggerEnter(collider) {\r\n        console.log(\"OnTriggerEnter!!!\");\r\n       
+    this.FireOn();\r\n    }\r\n    OnTriggerExit(collider) {\r\n        console.log(\"OnTriggerExit!!!\");\r\n       
+    this.FireOff();\r\n    }\r\n    FireOn() {\r\n        this.fire.SetActive(true);\r\n   
+    }\r\n    FireOff() {\r\n        this.fire.SetActive(false);\r\n    }\r\n}\r\nexports.default
+    = Braizer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQnJhaXplci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkJyYWl6ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsT0FBUSxTQUFRLHFDQUFxQjtJQU90RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDO0lBRW5CLENBQUM7SUFFRyxjQUFjLENBQUMsUUFBa0I7UUFDN0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDO1FBQ2pDLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQztJQUVsQixDQUFDO0lBRUQsYUFBYSxDQUFDLFFBQWtCO1FBQzVCLE9BQU8sQ0FBQyxHQUFHLENBQUMsa0JBQWtCLENBQUMsQ0FBQztRQUNoQyxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7SUFFbkIsQ0FBQztJQUVELE1BQU07UUFDRixJQUFJLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUU5QixDQUFDO0lBRUQsT0FBTztRQUNILElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBRS9CLENBQUM7Q0FJUjtBQXBDRCwwQkFvQ0MifQ==","assetPath":"Assets/Script/Braizer.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"fire","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Braizer","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 390b179725aa96ad982f23fa6ef1e467
+  onlyWriteTrigger: 0

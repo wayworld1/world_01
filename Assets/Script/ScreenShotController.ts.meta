@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 57a3f9b56e1286841834d4c44d89769c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nvar
+    ScreenShotType;\r\n(function (ScreenShotType) {\r\n    ScreenShotType[ScreenShotType[\"Save\"]
+    = 0] = \"Save\";\r\n    ScreenShotType[ScreenShotType[\"Share\"] = 1] = \"Share\";\r\n   
+    ScreenShotType[ScreenShotType[\"Feed\"] = 2] = \"Feed\";\r\n})(ScreenShotType
+    || (ScreenShotType = {}));\r\nclass ScreenShotController extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Awake() {\r\n        ScreenShotController.instance = this;\r\n    }\r\n   
+    SaveScreenShot() {\r\n        this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Save));\r\n   
+    }\r\n    ShareScreenShot() {\r\n        this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Share));\r\n   
+    }\r\n    FeedScreenShot() {\r\n        this.StartCoroutine(this.RenderTargetTexture(ScreenShotType.Feed));\r\n   
+    }\r\n    //public static StaticMethod() {\r\n    //}\r\n    *RenderTargetTexture(type)
+    {\r\n        //console.log(\"start\");\r\n        //yield new WaitForSeconds(1);\r\n       
+    //console.log(\"after 1 second\");\r\n        //yield new WaitForSeconds(2);\r\n       
+    //console.log(\"after 2 second\");\r\n        this.camera.targetTexture = this.renderTexture;\r\n       
+    yield new UnityEngine_1.WaitForEndOfFrame();\r\n        this.camera.Render();\r\n       
+    this.camera.targetTexture = null;\r\n        if (type == ScreenShotType.Save)
+    {\r\n            this.SaveToCameraRoll();\r\n        }\r\n        else if (type
+    == ScreenShotType.Share) {\r\n            this.ShareScreenShot();\r\n       
+    }\r\n        else if (type == ScreenShotType.Feed) {\r\n            this.CreateFeed();\r\n       
+    }\r\n    }\r\n    SaveToCameraRoll() {\r\n        ZEPETO_World_1.ZepetoWorldContent.SaveToCameraRoll(this.renderTexture,
+    null);\r\n    }\r\n    Share() {\r\n        ZEPETO_World_1.ZepetoWorldContent.Share(this.renderTexture,
+    null);\r\n    }\r\n    CreateFeed() {\r\n        ZEPETO_World_1.ZepetoWorldContent.CreateFeed(this.renderTexture,
+    \"[message]\", null);\r\n    }\r\n    Start() {\r\n    }\r\n}\r\nexports.default
+    = ScreenShotController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NyZWVuU2hvdENvbnRyb2xsZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTY3JlZW5TaG90Q29udHJvbGxlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF1RjtBQUN2RixpREFBcUQ7QUFDckQsK0NBQWtEO0FBRWxELElBQUssY0FJSjtBQUpELFdBQUssY0FBYztJQUNmLG1EQUFJLENBQUE7SUFDSixxREFBSyxDQUFBO0lBQ0wsbURBQUksQ0FBQTtBQUNSLENBQUMsRUFKSSxjQUFjLEtBQWQsY0FBYyxRQUlsQjtBQUVELE1BQXFCLG9CQUFxQixTQUFRLHFDQUFxQjtJQVNuRSxLQUFLO1FBQ0Qsb0JBQW9CLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUU3QyxDQUFDO0lBRVUsY0FBYztRQUNqQixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQztJQUV2RSxDQUFDO0lBRU0sZUFBZTtRQUNsQixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxjQUFjLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQztJQUV4RSxDQUFDO0lBRU0sY0FBYztRQUNqQixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxtQkFBbUIsQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQztJQUV2RSxDQUFDO0lBRUQsZ0NBQWdDO0lBRWhDLEdBQUc7SUFFSyxDQUFDLG1CQUFtQixDQUFDLElBQW9CO1FBQzdDLHVCQUF1QjtRQUN2Qiw4QkFBOEI7UUFDOUIsZ0NBQWdDO1FBQ2hDLDhCQUE4QjtRQUM5QixnQ0FBZ0M7UUFFaEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDLGFBQWEsQ0FBQztRQUMvQyxNQUFNLElBQUksK0JBQWlCLEVBQUUsQ0FBQztRQUM5QixJQUFJLENBQUMsTUFBTSxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBQ3JCLElBQUksQ0FBQyxNQUFNLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQztRQUVqQyxJQUFJLElBQUksSUFBSSxjQUFjLENBQUMsSUFBSSxFQUFFO1lBQzdCLElBQUksQ0FBQyxnQkFBZ0IsRUFBRSxDQUFDO1NBQzNCO2FBQU0sSUFBSSxJQUFJLElBQUksY0FBYyxDQUFDLEtBQUssRUFBRTtZQUNyQyxJQUFJLENBQUMsZUFBZSxFQUFFLENBQUM7U0FDMUI7YUFBTSxJQUFJLElBQUksSUFBSSxjQUFjLENBQUMsSUFBSSxFQUFFO1lBQ3BDLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztTQUNyQjtJQUdMLENBQUM7SUFFTyxnQkFBZ0I7UUFDcEIsaUNBQWtCLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxDQUFDLGFBQWEsRUFBRSxJQUFJLENBQUMsQ0FBQztJQUVsRSxDQUFDO0lBRU8sS0FBSztRQUNULGlDQUFrQixDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsYUFBYSxFQUFFLElBQUksQ0FBQyxDQUFDO0lBRXZELENBQUM7SUFFTyxVQUFVO1FBQ2QsaUNBQWtCLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsV0FBVyxFQUFFLElBQUksQ0FBQyxDQUFDO0lBRXpFLENBQUM7SUFFRCxLQUFLO0lBRUwsQ0FBQztDQUVKO0FBM0VELHVDQTJFQyJ9","assetPath":"Assets/Script/ScreenShotController.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"renderTexture","type":"UnityEngine.RenderTexture","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"camera","type":"UnityEngine.Camera","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ScreenShotController","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 3ab8cafbcba0f5c40d43fc15304da840
+  onlyWriteTrigger: 0

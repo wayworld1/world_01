@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: f2f5f22fe08fb9741a737b3b1bf00c61
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    Lantern_Braizer extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(collider)
+    {\r\n        this.FireOn();\r\n        //console.log(\"OnTriggerEnter!!!\");\r\n   
+    }\r\n    OnTriggerExit(collider) {\r\n        this.FireOff();\r\n        //console.log(\"OnTriggerExit!!!\");   
+    \r\n    }\r\n    Start() {\r\n        this.FireOff();\r\n    }\r\n    FireOn()
+    {\r\n        if (this.fire !== null)\r\n            this.fire.SetActive(true);\r\n       
+    if (this.light !== null)\r\n            this.light.range = 3;\r\n        if (this.light
+    !== null)\r\n            this.light.intensity = 2;\r\n    }\r\n    FireOff()
+    {\r\n        if (this.fire !== null)\r\n            this.fire.SetActive(false);\r\n       
+    if (this.light !== null)\r\n            this.light.range = 0;\r\n        if (this.light
+    !== null)\r\n            this.light.intensity = 0;\r\n    }\r\n}\r\nexports.default
+    = Lantern_Braizer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGFudGVybl9CcmFpemVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTGFudGVybl9CcmFpemVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBTTlELGNBQWMsQ0FBQyxRQUFrQjtRQUM3QixJQUFJLENBQUMsTUFBTSxFQUFFLENBQUM7UUFDZCxtQ0FBbUM7SUFDdkMsQ0FBQztJQUVELGFBQWEsQ0FBQyxRQUFrQjtRQUM1QixJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7UUFDZixzQ0FBc0M7SUFDMUMsQ0FBQztJQUNELEtBQUs7UUFDRCxJQUFJLENBQUMsT0FBTyxFQUFFLENBQUM7SUFFbkIsQ0FBQztJQUVELE1BQU07UUFDRixJQUFJLElBQUksQ0FBQyxJQUFJLEtBQUssSUFBSTtZQUFFLElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ2xELElBQUksSUFBSSxDQUFDLEtBQUssS0FBSyxJQUFJO1lBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxLQUFLLEdBQUcsQ0FBQyxDQUFDO1FBQzlDLElBQUksSUFBSSxDQUFDLEtBQUssS0FBSyxJQUFJO1lBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLEdBQUcsQ0FBQyxDQUFDO0lBRXRELENBQUM7SUFFRCxPQUFPO1FBQ0gsSUFBSSxJQUFJLENBQUMsSUFBSSxLQUFLLElBQUk7WUFBRSxJQUFJLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNuRCxJQUFJLElBQUksQ0FBQyxLQUFLLEtBQUssSUFBSTtZQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsS0FBSyxHQUFHLENBQUMsQ0FBQztRQUM5QyxJQUFJLElBQUksQ0FBQyxLQUFLLEtBQUssSUFBSTtZQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxHQUFHLENBQUMsQ0FBQztJQUV0RCxDQUFDO0NBRUo7QUFsQ0Qsa0NBa0NDIn0=","assetPath":"Assets/Script/Lantern_Braizer.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"light","type":"UnityEngine.Light","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"fire","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Lantern_Braizer","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 830cfb36db90b323ae750e5056218c24
+  onlyWriteTrigger: 0

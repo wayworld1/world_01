@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: ce717bf97ad69df468e4d13d2431b0c7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar MoveDirection;\r\n(function
+    (MoveDirection) {\r\n    MoveDirection[MoveDirection[\"Right\"] = 0] = \"Right\";\r\n   
+    MoveDirection[MoveDirection[\"Left\"] = 1] = \"Left\";\r\n    MoveDirection[MoveDirection[\"Up\"]
+    = 2] = \"Up\";\r\n    MoveDirection[MoveDirection[\"Down\"] = 3] = \"Down\";\r\n   
+    MoveDirection[MoveDirection[\"front\"] = 4] = \"front\";\r\n    MoveDirection[MoveDirection[\"back\"]
+    = 5] = \"back\";\r\n})(MoveDirection || (MoveDirection = {}));\r\nclass HorizontalMover_Z
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.direction
+    = MoveDirection.front;\r\n    }\r\n    FixedUpdate() {\r\n        if (this.direction
+    == MoveDirection.front) {\r\n            this.transform.Translate(new UnityEngine_1.Vector3(0,
+    0, UnityEngine_1.Time.fixedDeltaTime * this.speed));\r\n        }\r\n       
+    else if (this.direction == MoveDirection.back) {\r\n            this.transform.Translate(new
+    UnityEngine_1.Vector3(0, 0, -UnityEngine_1.Time.fixedDeltaTime * this.speed));\r\n       
+    }\r\n        if (this.transform.position.z > this.maxZ) {\r\n            this.direction
+    = MoveDirection.back;\r\n        }\r\n        else if (this.transform.position.z
+    < this.minZ) {\r\n            this.direction = MoveDirection.front;\r\n       
+    }\r\n    }\r\n}\r\nexports.default = HorizontalMover_Z;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSG9yaXpvbnRhbE1vdmVyX1ouanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJIb3Jpem9udGFsTW92ZXJfWi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE0QztBQUM1QyxpREFBcUQ7QUFFckQsSUFBSyxhQU9KO0FBUEQsV0FBSyxhQUFhO0lBQ2QsbURBQUssQ0FBQTtJQUNMLGlEQUFJLENBQUE7SUFDSiw2Q0FBRSxDQUFBO0lBQ0YsaURBQUksQ0FBQTtJQUNKLG1EQUFLLENBQUE7SUFDTCxpREFBSSxDQUFBO0FBQ1IsQ0FBQyxFQVBJLGFBQWEsS0FBYixhQUFhLFFBT2pCO0FBSUQsTUFBcUIsaUJBQWtCLFNBQVEscUNBQXFCO0lBUWhFLEtBQUs7UUFDRCxJQUFJLENBQUMsU0FBUyxHQUFHLGFBQWEsQ0FBQyxLQUFLLENBQUM7SUFFekMsQ0FBQztJQUVELFdBQVc7UUFDUCxJQUFJLElBQUksQ0FBQyxTQUFTLElBQUksYUFBYSxDQUFDLEtBQUssRUFBRTtZQUN2QyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRSxrQkFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQztTQUNqRjthQUFNLElBQUksSUFBSSxDQUFDLFNBQVMsSUFBSSxhQUFhLENBQUMsSUFBSSxFQUFFO1lBQzdDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsa0JBQUksQ0FBQyxjQUFjLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUM7U0FDbEY7UUFFRCxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsSUFBSSxFQUFFO1lBQ3ZDLElBQUksQ0FBQyxTQUFTLEdBQUcsYUFBYSxDQUFDLElBQUksQ0FBQztTQUN2QzthQUFNLElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxJQUFJLEVBQUU7WUFDOUMsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsS0FBSyxDQUFDO1NBQ3hDO0lBQ0wsQ0FBQztDQUVKO0FBM0JELG9DQTJCQyJ9","assetPath":"Assets/Script/HorizontalMover_Z.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"minZ","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxZ","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"HorizontalMover_Z","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 4780c715f624a61375e3d3faa9f0356f
+  onlyWriteTrigger: 0

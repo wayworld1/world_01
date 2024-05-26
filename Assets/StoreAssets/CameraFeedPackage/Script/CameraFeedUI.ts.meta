@@ -1,0 +1,49 @@
+fileFormatVersion: 2
+guid: 41168e3782bbf274b8e9602161c8d4e6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst ToastMessageUI_1 = require(\"./ToastMessageUI\");\r\nclass
+    CameraFeedUI extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.isShowing = false;\r\n    }\r\n   
+    Start() {\r\n        this.Reset();\r\n        for (const closeButton of this.closeButtons)
+    {\r\n            closeButton.onClick.AddListener(() => {\r\n                UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n           
+    });\r\n        }\r\n        // Register event of buttons\r\n        this.shutterButton.onClick.AddListener(()
+    => {\r\n            this.TakeScreenshotToRT();\r\n            this.shareContext.SetActive(true);\r\n       
+    });\r\n        this.saveButton.onClick.AddListener(() => {\r\n            ZEPETO_World_1.ZepetoWorldContent.SaveToCameraRoll(this.renderTexture,
+    (result) => { });\r\n            ToastMessageUI_1.default.Show(\"Save completed.\",
+    this.cameraFeedUI.transform);\r\n        });\r\n        this.shareButton.onClick.AddListener(()
+    => {\r\n            ZEPETO_World_1.ZepetoWorldContent.Share(this.renderTexture,
+    (result) => { });\r\n            ToastMessageUI_1.default.Show(\"Share completed.\",
+    this.cameraFeedUI.transform);\r\n        });\r\n        this.postToFeedButton.onClick.AddListener(()
+    => {\r\n            ZEPETO_World_1.ZepetoWorldContent.CreateFeed(this.renderTexture,
+    \"Let''s play with me!!\\n #popitadventure #zepetoworld #metaspace\", (result)
+    => { });\r\n            ToastMessageUI_1.default.Show(\"Post completed.\", this.cameraFeedUI.transform);\r\n       
+    });\r\n    }\r\n    Reset() {\r\n        this.cameraContext.SetActive(true);\r\n       
+    this.shareContext.SetActive(false);\r\n    }\r\n    TakeScreenshotToRT() {\r\n       
+    const camera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    camera.targetTexture = this.renderTexture;\r\n        camera.Render();\r\n       
+    camera.targetTexture = null;\r\n        const fx = UnityEngine_1.GameObject.Instantiate(this.flashlightFXPrefab,
+    this.shareContext.transform);\r\n    }\r\n}\r\nexports.default = CameraFeedUI;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2FtZXJhRmVlZFVJLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2FtZXJhRmVlZFVJLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXdEO0FBQ3hELG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXNEO0FBQ3RELCtDQUFrRDtBQUNsRCxxREFBOEM7QUFFOUMsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQUEvRDs7UUFtQlcsY0FBUyxHQUFTLEtBQUssQ0FBQztJQXNEbkMsQ0FBQztJQXBEVyxLQUFLO1FBQ1QsSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDO1FBRWIsS0FBSyxNQUFNLFdBQVcsSUFBSSxJQUFJLENBQUMsWUFBWSxFQUFFO1lBQ3pDLFdBQVcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtnQkFDakMsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQ3hDLENBQUMsQ0FBQyxDQUFDO1NBQ047UUFFRCw0QkFBNEI7UUFDNUIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN4QyxJQUFJLENBQUMsa0JBQWtCLEVBQUUsQ0FBQztZQUUxQixJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN0QyxDQUFDLENBQUMsQ0FBQztRQUVILElBQUksQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDckMsaUNBQWtCLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxDQUFDLGFBQWEsRUFBRSxDQUFDLE1BQWUsRUFBRSxFQUFFLEdBQUUsQ0FBQyxDQUFDLENBQUM7WUFFakYsd0JBQWMsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLEVBQUUsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUN4RSxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdEMsaUNBQWtCLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRSxHQUFFLENBQUMsQ0FBQyxDQUFDO1lBRXRFLHdCQUFjLENBQUMsSUFBSSxDQUFDLGtCQUFrQixFQUFFLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDekUsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsZ0JBQWdCLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDM0MsaUNBQWtCLENBQUMsVUFBVSxDQUN6QixJQUFJLENBQUMsYUFBYSxFQUNsQixnRUFBZ0UsRUFDaEUsQ0FBQyxNQUFlLEVBQUUsRUFBRSxHQUFFLENBQUMsQ0FDMUIsQ0FBQztZQUVGLHdCQUFjLENBQUMsSUFBSSxDQUFDLGlCQUFpQixFQUFFLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLENBQUM7UUFDeEUsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRU0sS0FBSztRQUNSLElBQUksQ0FBQyxhQUFhLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ25DLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3ZDLENBQUM7SUFFTyxrQkFBa0I7UUFDdEIsTUFBTSxNQUFNLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQztRQUMxRCxNQUFNLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxhQUFhLENBQUM7UUFFMUMsTUFBTSxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBRWhCLE1BQU0sQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDO1FBRTVCLE1BQU0sRUFBRSxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxrQkFBa0IsRUFBRSxJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBZSxDQUFDO0lBQzFHLENBQUM7Q0FDSjtBQXpFRCwrQkF5RUMifQ==","assetPath":"Assets/CameraFeedPackage/Script/CameraFeedUI.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"cameraFeedUI","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"closeButtons","type":"UnityEngine.UI.Button[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"cameraContext","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"shutterButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"renderTexture","type":"UnityEngine.RenderTexture","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"shareContext","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"saveButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"shareButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"postToFeedButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"flashlightFXPrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isShowing","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[{"name":"HideInInspector","args":[]}]}],"name":"CameraFeedUI","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 06835f6673931312922b1b610d932a2e
+  onlyWriteTrigger: 0

@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: d8adb96da849540469a8565c13a43d76
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nvar MoveDirection;\r\n(function
+    (MoveDirection) {\r\n    MoveDirection[MoveDirection[\"Right\"] = 0] = \"Right\";\r\n   
+    MoveDirection[MoveDirection[\"Left\"] = 1] = \"Left\";\r\n    MoveDirection[MoveDirection[\"Up\"]
+    = 2] = \"Up\";\r\n    MoveDirection[MoveDirection[\"Down\"] = 3] = \"Down\";\r\n})(MoveDirection
+    || (MoveDirection = {}));\r\nclass VerticalMover extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.direction = MoveDirection.Up;\r\n    }\r\n   
+    FixedUpdate() {\r\n        if (this.direction == MoveDirection.Up) {\r\n           
+    this.transform.Translate(new UnityEngine_1.Vector3(0, UnityEngine_1.Time.fixedDeltaTime
+    * this.speed, 0));\r\n        }\r\n        else if (this.direction == MoveDirection.Down)
+    {\r\n            this.transform.Translate(new UnityEngine_1.Vector3(0, -UnityEngine_1.Time.fixedDeltaTime
+    * this.speed, 0));\r\n        }\r\n        if (this.transform.position.y > this.maxY)
+    {\r\n            this.direction = MoveDirection.Down;\r\n        }\r\n       
+    else if (this.transform.position.y < this.minY) {\r\n            this.direction
+    = MoveDirection.Up;\r\n        }\r\n    }\r\n}\r\nexports.default = VerticalMover;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVmVydGljYWxNb3Zlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlZlcnRpY2FsTW92ZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEM7QUFDNUMsaURBQXFEO0FBRXJELElBQUssYUFLSjtBQUxELFdBQUssYUFBYTtJQUNkLG1EQUFLLENBQUE7SUFDTCxpREFBSSxDQUFBO0lBQ0osNkNBQUUsQ0FBQTtJQUNGLGlEQUFJLENBQUE7QUFDUixDQUFDLEVBTEksYUFBYSxLQUFiLGFBQWEsUUFLakI7QUFFRCxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBTzVELEtBQUs7UUFDRCxJQUFJLENBQUMsU0FBUyxHQUFHLGFBQWEsQ0FBQyxFQUFFLENBQUM7SUFFdEMsQ0FBQztJQUVELFdBQVc7UUFDUCxJQUFLLElBQUksQ0FBQyxTQUFTLElBQUksYUFBYSxDQUFDLEVBQUUsRUFBRTtZQUNyQyxJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLGtCQUFJLENBQUMsY0FBYyxHQUFHLElBQUksQ0FBQyxLQUFLLEVBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUNqRjthQUFNLElBQUksSUFBSSxDQUFDLFNBQVMsSUFBSSxhQUFhLENBQUMsSUFBSSxFQUFFO1lBQzdDLElBQUksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxrQkFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUM7U0FDbEY7UUFFRCxJQUFJLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsSUFBSSxFQUFFO1lBQ3ZDLElBQUksQ0FBQyxTQUFTLEdBQUcsYUFBYSxDQUFDLElBQUksQ0FBQztTQUN2QzthQUFNLElBQUksSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxJQUFJLEVBQUU7WUFDOUMsSUFBSSxDQUFDLFNBQVMsR0FBRyxhQUFhLENBQUMsRUFBRSxDQUFDO1NBQ3JDO0lBQ0wsQ0FBQztDQUVKO0FBMUJELGdDQTBCQyJ9","assetPath":"Assets/Script/VerticalMover.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"minY","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxY","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"VerticalMover","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 33260ffd4987951ad73b14536004f788
+  onlyWriteTrigger: 0

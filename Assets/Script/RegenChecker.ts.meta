@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 755149b5f40b25540ac6148592aa1201
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass RegenChecker extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(collider) {\r\n        if (collider.gameObject.layer
+    == UnityEngine_1.LayerMask.NameToLayer(\"Player\")) {\r\n            //console.log(\"OnTriggerEnter!!!\");\r\n           
+    var zepetoCharacter = collider.gameObject.GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoCharacter));\r\n           
+    zepetoCharacter.Teleport(UnityEngine_1.Vector3.zero, UnityEngine_1.Quaternion.identity);\r\n       
+    }\r\n    }\r\n    Start() {\r\n    }\r\n}\r\nexports.default = RegenChecker;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVnZW5DaGVja2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUmVnZW5DaGVja2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVFO0FBQ3ZFLDZFQUE4RDtBQUM5RCxpREFBcUQ7QUFFckQsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQUUzRCxjQUFjLENBQUMsUUFBaUI7UUFDNUIsSUFBSSxRQUFRLENBQUMsVUFBVSxDQUFDLEtBQUssSUFBSSx1QkFBUyxDQUFDLFdBQVcsQ0FBQyxRQUFRLENBQUMsRUFBRTtZQUM5RCxtQ0FBbUM7WUFDbkMsSUFBSSxlQUFlLEdBQUcsUUFBUSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsNkNBQWUsRUFBRyxDQUFDO1lBQzFFLGVBQWUsQ0FBQyxRQUFRLENBQUMscUJBQU8sQ0FBQyxJQUFJLEVBQUUsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUUvRDtJQUNMLENBQUM7SUFFRCxLQUFLO0lBRUwsQ0FBQztDQUVKO0FBZkQsK0JBZUMifQ==","assetPath":"Assets/Script/RegenChecker.ts","manifest":{"properties":[],"name":"RegenChecker","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 8bab98185a322919f4adb631c35db575
+  onlyWriteTrigger: 0

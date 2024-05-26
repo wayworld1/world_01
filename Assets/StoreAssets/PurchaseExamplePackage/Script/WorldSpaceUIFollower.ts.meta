@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: 5f0ce270a15a7d64a8313d9798c93e90
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass WorldSpaceUIFollower extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.worldOffset = new UnityEngine_1.Vector3(0, 0, 0);\r\n        this.maxDistance
+    = 20;\r\n    }\r\n    Start() {\r\n        this.rectTrsf = this.GetComponent($typeof(UnityEngine_1.RectTransform));\r\n       
+    this.rectTrsf.anchorMin = new UnityEngine_1.Vector2(0, 0);\r\n        this.rectTrsf.anchorMax
+    = new UnityEngine_1.Vector2(0, 0);\r\n    }\r\n    Update() {\r\n        this.UpdatePosition();\r\n   
+    }\r\n    UpdatePosition() {\r\n        const camera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    if (!camera || !this.targetTrsf)\r\n            return;\r\n        const distanceFromTarget
+    = UnityEngine_1.Vector3.op_Subtraction(camera.transform.position, this.targetTrsf.position).magnitude;\r\n       
+    let position;\r\n        if (distanceFromTarget > this.maxDistance) {\r\n           
+    position = new UnityEngine_1.Vector2(-10000, -100000);\r\n        }\r\n       
+    else {\r\n            const parentCanvas = this.GetComponentInParent($typeof(UnityEngine_1.Canvas));\r\n           
+    if (!parentCanvas)\r\n                return;\r\n            const parentCanvasRect
+    = parentCanvas.GetComponent($typeof(UnityEngine_1.RectTransform));\r\n           
+    const viewportPosition = camera.WorldToViewportPoint(UnityEngine_1.Vector3.op_Addition(this.targetTrsf.position,
+    this.worldOffset));\r\n            position = new UnityEngine_1.Vector2(viewportPosition.x
+    * parentCanvasRect.sizeDelta.x, viewportPosition.y * parentCanvasRect.sizeDelta.y);\r\n       
+    }\r\n        this.rectTrsf.anchoredPosition = position;\r\n    }\r\n}\r\nexports.default
+    = WorldSpaceUIFollower;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiV29ybGRTcGFjZVVJRm9sbG93ZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJXb3JsZFNwYWNlVUlGb2xsb3dlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFnRztBQUVoRyw2RUFBNEQ7QUFDNUQsaURBQXNEO0FBRXRELE1BQXFCLG9CQUFxQixTQUFRLHFDQUFxQjtJQUF2RTs7UUFFVyxnQkFBVyxHQUFZLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBQzVDLGdCQUFXLEdBQVUsRUFBRSxDQUFDO0lBcUNuQyxDQUFDO0lBakNXLEtBQUs7UUFDVCxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxZQUFZLFNBQUMsMkJBQWEsRUFBRyxDQUFDO1FBQ25ELElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxHQUFHLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxDQUFDLENBQUM7UUFDNUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLEdBQUcsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQztJQUNoRCxDQUFDO0lBRU8sTUFBTTtRQUNWLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQztJQUMxQixDQUFDO0lBRU8sY0FBYztRQUNsQixNQUFNLE1BQU0sR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1FBQzFELElBQUksQ0FBQyxNQUFNLElBQUksQ0FBQyxJQUFJLENBQUMsVUFBVTtZQUFFLE9BQU87UUFFeEMsTUFBTSxrQkFBa0IsR0FBRyxxQkFBTyxDQUFDLGNBQWMsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQyxDQUFDLFNBQVMsQ0FBQztRQUNqSCxJQUFJLFFBQVEsQ0FBQztRQUViLElBQUksa0JBQWtCLEdBQUcsSUFBSSxDQUFDLFdBQVcsRUFBRTtZQUN2QyxRQUFRLEdBQUcsSUFBSSxxQkFBTyxDQUFDLENBQUMsS0FBSyxFQUFFLENBQUMsTUFBTSxDQUFDLENBQUM7U0FDM0M7YUFBTTtZQUNILE1BQU0sWUFBWSxHQUFHLElBQUksQ0FBQyxvQkFBb0IsU0FBQyxvQkFBTSxFQUFHLENBQUM7WUFDekQsSUFBSSxDQUFDLFlBQVk7Z0JBQUUsT0FBTztZQUMxQixNQUFNLGdCQUFnQixHQUFHLFlBQVksQ0FBQyxZQUFZLFNBQUMsMkJBQWEsRUFBRyxDQUFDO1lBRXBFLE1BQU0sZ0JBQWdCLEdBQUcsTUFBTSxDQUFDLG9CQUFvQixDQUFDLHFCQUFPLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDO1lBRXRILFFBQVEsR0FBRyxJQUFJLHFCQUFPLENBQ2xCLGdCQUFnQixDQUFDLENBQUMsR0FBRyxnQkFBZ0IsQ0FBQyxTQUFTLENBQUMsQ0FBQyxFQUNqRCxnQkFBZ0IsQ0FBQyxDQUFDLEdBQUcsZ0JBQWdCLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FDcEQsQ0FBQztTQUNMO1FBQ0QsSUFBSSxDQUFDLFFBQVEsQ0FBQyxnQkFBZ0IsR0FBRyxRQUFRLENBQUM7SUFDOUMsQ0FBQztDQUNKO0FBeENELHVDQXdDQyJ9","assetPath":"Assets/PurchaseExamplePackage/Script/WorldSpaceUIFollower.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"targetTrsf","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"worldOffset","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxDistance","type":"System.Single","isArray":false,"initValue":["20"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"WorldSpaceUIFollower","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: c8a0798b15b26cd098da5d69b715de0c
+  onlyWriteTrigger: 0

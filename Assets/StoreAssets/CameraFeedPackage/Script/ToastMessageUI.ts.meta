@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: bf56df6d2fc4ac547b7e73414dff2304
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ToastMessageReference_1 = require(\"./ToastMessageReference\");\r\nclass ToastMessageUI
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    static Show(message, parentTrsf)
+    {\r\n        console.log(ToastMessageReference_1.default.Instance);\r\n       
+    const toastMessageUI = UnityEngine_1.GameObject.Instantiate(ToastMessageReference_1.default.Instance.toastMessagePrefab,
+    parentTrsf);\r\n        toastMessageUI.GetComponent($typeof(ToastMessageUI)).SetText(message);\r\n   
+    }\r\n    Start() {\r\n        this.remainedDelay = this.delay;\r\n        this.time
+    = 0;\r\n    }\r\n    Update() {\r\n        if (this.remainedDelay > 0) {\r\n           
+    this.remainedDelay -= UnityEngine_1.Time.deltaTime;\r\n        }\r\n        else
+    {\r\n            let color = this.panelImage.color;\r\n            color.a =
+    UnityEngine_1.Mathf.Clamp(color.a - UnityEngine_1.Time.deltaTime * 0.5, 0, 1);\r\n           
+    this.panelImage.color = color;\r\n            this.text.color = color;\r\n           
+    if (color.a <= 0) {\r\n                UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n           
+    }\r\n        }\r\n        this.time = UnityEngine_1.Mathf.Clamp(this.time + UnityEngine_1.Time.deltaTime,
+    0, 1);\r\n        const scale = this.easeOutElastic(this.time);\r\n        this.transform.localScale
+    = new UnityEngine_1.Vector3(scale, scale, 1);\r\n    }\r\n    SetText(text) {\r\n       
+    this.text.text = text;\r\n    }\r\n    easeOutElastic(x) {\r\n        const c4
+    = (2 * Math.PI) / 3;\r\n        return x === 0 ? 0 : x === 1 ? 1 : UnityEngine_1.Mathf.Pow(2,
+    -10 * x) * UnityEngine_1.Mathf.Sin((x * 10 - 0.75) * c4) + 1;\r\n    }\r\n}\r\nexports.default
+    = ToastMessageUI;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9hc3RNZXNzYWdlVUkuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUb2FzdE1lc3NhZ2VVSS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUEwRTtBQUMxRSxtREFBNkM7QUFDN0MsaURBQXNEO0FBQ3RELG1FQUE0RDtBQUU1RCxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBV3RELE1BQU0sQ0FBQyxJQUFJLENBQUMsT0FBZSxFQUFFLFVBQXFCO1FBQ3JELE9BQU8sQ0FBQyxHQUFHLENBQUMsK0JBQXFCLENBQUMsUUFBUSxDQUFDLENBQUM7UUFDNUMsTUFBTSxjQUFjLEdBQUcsd0JBQVUsQ0FBQyxXQUFXLENBQ3pDLCtCQUFxQixDQUFDLFFBQVEsQ0FBQyxrQkFBa0IsRUFDakQsVUFBVSxDQUNDLENBQUM7UUFDaEIsY0FBYyxDQUFDLFlBQVksU0FBQyxjQUFjLEdBQUksT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFDO0lBQ25FLENBQUM7SUFDTyxLQUFLO1FBQ1QsSUFBSSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDO1FBQ2hDLElBQUksQ0FBQyxJQUFJLEdBQUcsQ0FBQyxDQUFDO0lBQ2xCLENBQUM7SUFDTyxNQUFNO1FBQ1YsSUFBSSxJQUFJLENBQUMsYUFBYSxHQUFHLENBQUMsRUFBRTtZQUN4QixJQUFJLENBQUMsYUFBYSxJQUFJLGtCQUFJLENBQUMsU0FBUyxDQUFDO1NBQ3hDO2FBQU07WUFDSCxJQUFJLEtBQUssR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLEtBQUssQ0FBQztZQUNsQyxLQUFLLENBQUMsQ0FBQyxHQUFHLG1CQUFLLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEdBQUcsR0FBRyxFQUFFLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQztZQUM1RCxJQUFJLENBQUMsVUFBVSxDQUFDLEtBQUssR0FBRyxLQUFLLENBQUM7WUFDOUIsSUFBSSxDQUFDLElBQUksQ0FBQyxLQUFLLEdBQUcsS0FBSyxDQUFDO1lBRXhCLElBQUksS0FBSyxDQUFDLENBQUMsSUFBSSxDQUFDLEVBQUU7Z0JBQ2Qsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO2FBQ3ZDO1NBQ0o7UUFFRCxJQUFJLENBQUMsSUFBSSxHQUFHLG1CQUFLLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxJQUFJLEdBQUcsa0JBQUksQ0FBQyxTQUFTLEVBQUUsQ0FBQyxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBRTFELE1BQU0sS0FBSyxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQzdDLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxHQUFHLElBQUkscUJBQU8sQ0FBQyxLQUFLLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQyxDQUFDO0lBQzdELENBQUM7SUFFTSxPQUFPLENBQUMsSUFBWTtRQUN2QixJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUM7SUFDMUIsQ0FBQztJQUVPLGNBQWMsQ0FBQyxDQUFRO1FBQzNCLE1BQU0sRUFBRSxHQUFHLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxFQUFFLENBQUMsR0FBRyxDQUFDLENBQUM7UUFFN0IsT0FBTyxDQUFDLEtBQUssQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsS0FBSyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsbUJBQUssQ0FBQyxHQUFHLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBRSxHQUFHLENBQUMsQ0FBQyxHQUFHLG1CQUFLLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxHQUFHLEVBQUUsR0FBRyxJQUFJLENBQUMsR0FBRyxFQUFFLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDbkcsQ0FBQztDQUNKO0FBcERELGlDQW9EQyJ9","assetPath":"Assets/CameraFeedPackage/Script/ToastMessageUI.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"toastMessagePrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"delay","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"panelImage","type":"UnityEngine.UI.Image","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"text","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ToastMessageUI","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 5e1263b65ded2ae1f5f1cee4cc26cf25
+  onlyWriteTrigger: 0

@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 61aa147b89de5684b8f44b01a1454191
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    CharacterPlayer_1 = require(\"./CharacterPlayer\");\r\nconst UiController_1 =
+    require(\"./UiController\");\r\nclass Furniture extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerEnter(collider) {\r\n        this.characterPlayer = collider.gameObject.GetComponent($typeof(CharacterPlayer_1.default));\r\n       
+    UiController_1.default.instance.OnEnterFurniture(() => {\r\n            this.PlayInteraction();\r\n       
+    });\r\n    }\r\n    OnTriggerExit(collider) {\r\n        this.characterPlayer
+    = null;\r\n        UiController_1.default.instance.OnExitFurniture();\r\n   
+    }\r\n    PlayInteraction() {\r\n        //this.characterPlayer.PlayGestureWithId(this.gestureId);\r\n       
+    this.characterPlayer.InteractFurniture(this.pivot, this.gestureId);\r\n    }\r\n   
+    Start() {\r\n    }\r\n}\r\nexports.default = Furniture;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRnVybml0dXJlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRnVybml0dXJlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBQ3JELHVEQUFnRDtBQUNoRCxpREFBMEM7QUFHMUMsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQU94RCxjQUFjLENBQUMsUUFBa0I7UUFDN0IsSUFBSSxDQUFDLGVBQWUsR0FBRyxRQUFRLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyx5QkFBZSxFQUFHLENBQUM7UUFDM0Usc0JBQVksQ0FBQyxRQUFRLENBQUMsZ0JBQWdCLENBQUMsR0FBRyxFQUFFO1lBQ3hDLElBQUksQ0FBQyxlQUFlLEVBQUUsQ0FBQztRQUMzQixDQUFDLENBQUMsQ0FBQztJQUVQLENBQUM7SUFFRCxhQUFhLENBQUMsUUFBa0I7UUFDNUIsSUFBSSxDQUFDLGVBQWUsR0FBRyxJQUFJLENBQUM7UUFDNUIsc0JBQVksQ0FBQyxRQUFRLENBQUMsZUFBZSxFQUFFLENBQUM7SUFFNUMsQ0FBQztJQUVPLGVBQWU7UUFDbkIseURBQXlEO1FBQ3pELElBQUksQ0FBQyxlQUFlLENBQUMsaUJBQWlCLENBQUMsSUFBSSxDQUFDLEtBQUssRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7SUFDdkUsQ0FBQztJQUVELEtBQUs7SUFFTCxDQUFDO0NBRUo7QUE5QkQsNEJBOEJDIn0=","assetPath":"Assets/Script/Furniture.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"pivot","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"gestureId","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Furniture","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 392e15c3c7d057e51632de235cd58a0f
+  onlyWriteTrigger: 0

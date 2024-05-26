@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: e9c9c89603264f346ba8cdaaa78cfc95
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    ToastMessageReference {\r\n    Awake() {\r\n        ToastMessageReference.Instance
+    = this;\r\n    }\r\n}\r\nexports.default = ToastMessageReference;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVG9hc3RNZXNzYWdlUmVmZXJlbmNlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVG9hc3RNZXNzYWdlUmVmZXJlbmNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXlDO0FBRXpDLE1BQXFCLHFCQUFxQjtJQUs5QixLQUFLO1FBQ1QscUJBQXFCLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUMxQyxDQUFDO0NBQ0o7QUFSRCx3Q0FRQyJ9","assetPath":"Assets/CameraFeedPackage/Script/ToastMessageReference.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"toastMessagePrefab","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ToastMessageReference","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: e8fc8dcbfbb18eea57f0fbd53bc0c0a0
+  onlyWriteTrigger: 0
