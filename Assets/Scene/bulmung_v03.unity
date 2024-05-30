@@ -5421,6 +5421,7 @@ GameObject:
   - component: {fileID: 243147051}
   - component: {fileID: 243147050}
   - component: {fileID: 243147049}
+  - component: {fileID: 243147052}
   m_Layer: 5
   m_Name: Z_share
   m_TagString: Untagged
@@ -5530,6 +5531,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243147047}
   m_CullTransparentMesh: 1
+--- !u!225 &243147052
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243147047}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &245728167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9029,6 +9042,7 @@ GameObject:
   - component: {fileID: 447790851}
   - component: {fileID: 447790850}
   - component: {fileID: 447790849}
+  - component: {fileID: 447790852}
   m_Layer: 5
   m_Name: Z_feed
   m_TagString: Untagged
@@ -9138,6 +9152,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447790847}
   m_CullTransparentMesh: 1
+--- !u!225 &447790852
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447790847}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &448668754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23769,6 +23795,7 @@ GameObject:
   - component: {fileID: 957055854}
   - component: {fileID: 957055853}
   - component: {fileID: 957055852}
+  - component: {fileID: 957055855}
   m_Layer: 5
   m_Name: Z_save
   m_TagString: Untagged
@@ -23878,6 +23905,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957055850}
   m_CullTransparentMesh: 1
+--- !u!225 &957055855
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957055850}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &958000620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdcdb89cf1f21924d98f6a45d6ce95e6, type: 3}
