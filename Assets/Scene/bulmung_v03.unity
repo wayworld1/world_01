@@ -52637,6 +52637,8 @@ MonoBehaviour:
     - stopGestureBtn
     - inventorytBtn
     - interactionBtn
+    - foldScreenShot
+    - foldScreenShotAnim
     unityValues:
     - {fileID: 957055852}
     - {fileID: 243147049}
@@ -52645,7 +52647,11 @@ MonoBehaviour:
     - {fileID: 1618100702}
     - {fileID: 580883620}
     - {fileID: 890910975}
+    - {fileID: 0}
+    - {fileID: 1762924916}
     values:
+    - 
+    - 
     - 
     - 
     - 
