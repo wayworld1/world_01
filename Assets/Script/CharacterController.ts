@@ -18,7 +18,12 @@ export default class CharacterController extends ZepetoScriptBehaviour {
             var ZepetoCharacter: ZepetoCharacter = player.zepetoPlayer.character;
             var characterPlayer = ZepetoCharacter.gameObject.AddComponent<CharacterPlayer>();
 
-            UiController.instance.characterPlayer = characterPlayer;
+            //UiController.instance.characterPlayer = characterPlayer;
+            class UiController {
+                public static instance: UiController;
+
+                public characterPlayer: CharacterPlayer;
+            }
             this.ContentRequest(characterPlayer);
 
         });
