@@ -80,11 +80,11 @@ export default class UiController extends ZepetoScriptBehaviour {
         this.foldScreenShot.onClick.AddListener(() => {
             if(this.show == false) {
                 this.show = true;
-                this.foldScreenShotAnim.Play("ScreenShot_show");
+                this.foldScreenShotAnim.Play("ScreenShot_Show");
             }
             else if (this.show == true) {
                 this.show = false;
-                this.foldScreenShotAnim.Play("ScreenShot_hide");
+                this.foldScreenShotAnim.Play("ScreenShot_Hide");
             }
         });
 
